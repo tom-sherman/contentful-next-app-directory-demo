@@ -26,13 +26,13 @@ export type Scalars = {
    */
   DateTime: string;
   /** The 'Dimension' type represents dimensions as whole numeric values between `1` and `4000`. */
-  Dimension: any;
+  Dimension: number;
   /** The 'HexColor' type represents color in `rgb:ffffff` string format. */
-  HexColor: any;
+  HexColor: string;
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
-  JSON: any;
+  JSON: unknown;
   /** The 'Quality' type represents quality as whole numeric values between `1` and `100`. */
-  Quality: any;
+  Quality: number;
 };
 
 /** Represents a binary file in a space. An asset can be any file type. */

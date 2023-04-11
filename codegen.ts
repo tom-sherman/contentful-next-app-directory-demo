@@ -19,7 +19,12 @@ const config: CodegenConfig = {
       config: {
         scalars: {
           DateTime: "string",
+          Dimension: "number",
+          HexColor: "string",
+          JSON: "unknown",
+          Quality: "number",
         },
+        strictScalars: true,
       },
     },
   },
