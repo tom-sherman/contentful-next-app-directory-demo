@@ -97,3 +97,9 @@ const data2 = await contentful().load(doc);
 1. Merge the AST trees of the query while automatically aliasing fields that have naming conflicts
 2. Run the resulting query against the Contentful's GraphQL API
 3. Transform the result object back to an array of the responses of all individual queries and return.
+
+### Normalised cache
+
+> **Note** This is not implemented yet
+
+Within a single request, queries to the same `Entry` (a GraphQL interface in the Contentful schema that specifies an `id: String!` field) are cached. This allows for the minimal number of requests to be sent to Contentful's GraphQL API, and can be helpful for keeping under the query complexity limit.
