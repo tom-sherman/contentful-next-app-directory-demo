@@ -100,6 +100,6 @@ const data2 = await contentful().load(doc);
 
 ### Normalised cache
 
-> **Note** This is not implemented yet
-
 Within a single request, queries to the same `Entry` (a GraphQL interface in the Contentful schema that specifies an `id: String!` field) are cached. This allows for the minimal number of requests to be sent to Contentful's GraphQL API, and can be helpful for keeping under the query complexity limit.
+
+Right now the `id` selection needs to be added to each query manually, but this could be automated in the future.
