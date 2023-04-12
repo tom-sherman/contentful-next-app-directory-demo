@@ -1,3 +1,4 @@
+import "server-only";
 import { cache } from "react";
 import DataLoader from "dataloader";
 import { TypedDocumentNode } from "@graphql-typed-document-node/core";
