@@ -11,6 +11,7 @@ interface AbitraryQueryWithVariables<
 > {
   query: TypedDocumentNode<TResult, TVariables>;
   variables?: TVariables;
+  fetchOptions?: RequestInit;
 }
 
 interface UntypedResult {
@@ -80,7 +81,7 @@ export const contentful = cache(() => {
       return Promise.all(
         queries.map((query) =>
           client
-            .query(query.query, query.variables ?? {})
+            .query(query.query, query.variables ?? {}, query.fetchOptions)
             .toPromise()
             .then((result) => result.data)
         )
